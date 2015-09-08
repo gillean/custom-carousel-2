@@ -1,32 +1,61 @@
-.frame {
-  width: 800px;
-  height: 600px;
-  overflow: hidden;
-  position: relative;
+#carousel_inner {
+float:left; /* important for inline positioning */
+width:1530px; /* important (this width = width of list item(including margin) * items shown */ 
+overflow: hidden;  /* important (hide the items outside the div) */
+/* non-important styling bellow */
+background: #F0F0F0;
 }
 
-.tray {
-  height: 600px;
-  position: relative;
-}
-  
-.slide {
-  float: left;
-  width: 800px;
-  height: 600px;
-}
-
-.slide img, .slide iframe, .slide table, .slide video, .slide audio {
-  width: 100%;
-  max-width: 100%;
+#carousel_ul {
+position:relative;
+left:-510px; /* important (this should be negative number of list items width(including margin) */
+list-style-type: none; /* re moving the default styling for unordered list items */
+margin: 0px;
+padding: 0px;
+width:9999px; /* important */
+/* non-important styling bellow */
+padding-bottom:10px;
 }
 
-.prev, .next {
-  position: absolute;
-  top: 49%;
+#carousel_ul li{
+float: left; /* important for inline positioning of the list items */                                    
+width:500px;  /* fixed width, important */
+/* just styling bellow*/
+padding:0px;
+height:110px;
+background: #000000;
+margin-top:10px;
+margin-bottom:10px; 
+margin-left:5px; 
+margin-right:5px; 
 }
-.prev { left: 0; }
-.next { right: 0; }
+
+#carousel_ul li img {
+.margin-bottom:-4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/
+/* styling */
+cursor:pointer;
+cursor: hand; 
+border:0px; 
+}
+#left_scroll, #right_scroll{
+height:130px; 
+width:15px; 
+top:49%;
+position:absolute;
+}
+
+#left_scroll{
+  left:0;
+}
+
+#right_scroll{
+  right:0;
+}
+#left_scroll, #right_scroll{
+/*styling*/
+cursor: pointer;
+cursor: hand;
+}
 
 
 
